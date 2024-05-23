@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>this is home page inside app</h1>
+    <h1>Age : {{age}} </h1>
+    {% if age == 20 %}
+    <h1>you are ready to enter donkey's life</h1>
+    {% endif %}
+    <!-- find var-length -->
+    <h1> {{ name | length }} </h1>
+    <!-- add value-->
+    <h1>{{ age | add:"2" }}</h1>
+    <!-- addslashes -->
+    <h1>{{ text | addslashes }}</h1>
+    <!-- capitalize first character -->
+    <h1>{{ text | capfirst }}</h1>
+    <!-- centralized value -->
+    <h1>"{{ text | center:"100" }}"</h1>
+    <!-- remove specific character -->
+    <h1>{{ text | cut:"m" }}</h1>
+    <!-- datetime -->
+    <h1>{{ date | date:"D d M Y" }}</h1>
+    <!-- default for empyt strin -->
+    <h1>{{ value | default:"Nothing" }}</h1>
+    <!-- sort dictionary using key as your input -->
+    <h1>{{ lOfDict | dictsort:"age" }}</h1>
+    <!-- divisibility -->
+    <h1>{{ age | divisibleby:"3" }}</h1>
+    <!-- escape -->
+    <h1>{{ title | escape }}</h1>
+    <!-- filesize -->
+    <h1>{{ file | filesizeformat }}</h1>
+    <!-- return first -->
+    <h1>{{ text | first }}</h1>
+    <!-- join -->
+    <h1>{{ text | join:" // " }}</h1>
+    <!-- last  -->
+    <h1>{{text | last}}</h1>
+    <!-- linenumbers -->
+    <h1>{{ text | linenumbers }}</h1>
+    <!-- converted to lower -->
+    <h1>{{ text | lower }}</h1>
+    <!-- makelist-->
+    <h1>{{ name | make_list }}</h1>
+    <!--  random-->
+    <h1>{{name | random}}</h1>
+    <!-- slice -->
+    <h1>{{text | slice:'10'}}</h1>
+    <!-- converted space to hyphen -->
+    <h1>{{ text | slugify }} </h1>
+    <!-- time -->
+    <h1>{{ time | time:"H:i" }}
+    <!-- timesince -->
+    <h1>{{ time | timesince:date }}</h1>
+    <!-- title -->
+    <h1>{{ text | title }}</h1>
+    <!-- converted nested list to html unorder list -->
+    <h1>{{ var | unordered_list }}</h1>
+    <!-- upper -->
+    <h1>{{text | upper}}</h1>
+    <!-- count word -->
+    <h1>{{text | wordcount}}</h1>
+    <!-- truncatewords-->
+    <h1>{{text | truncatewords:2}} </h1>
+    <!-- striptages remove html tag -->
+    <h1>{{"i<p>love</p> my <h1></h1>life</h1>" | striptags}}</h1>
+
+</body>
+</html>
